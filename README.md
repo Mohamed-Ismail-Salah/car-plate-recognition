@@ -1,12 +1,12 @@
-# 🚘 Arabic Car Plate Recognition
+# 🚘 Car Plate Recognition
 
-This project provides a **real-time Arabic car plate recognition system**, supporting detection and recognition of Arabic letters and digits using **YOLOv8** and **OCR techniques**.
+This project provides a **real-time   car plate recognition system**, supporting detection and recognition of Arabic letters and digits using **YOLOv8** and **OCR techniques**.
 
 ---
 
 ## 🎯 Project Objectives
 
-- Detect Arabic car plates in images and video using object detection.
+- Detect car plates in images and video using object detection.
 - Extract and recognize Arabic characters using two different approaches:
   1. **YOLOv8-based character detection**.
   2. **OCR-based character recognition**.
@@ -33,16 +33,9 @@ This project provides a **real-time Arabic car plate recognition system**, suppo
 | Tool           | Purpose                              |
 |----------------|--------------------------------------|
 | YOLOv8         | Plate and character detection        |
-| EasyOCR / Tesseract | Arabic OCR recognition       |
+| EasyOCR        |  OCR recognition       |
 | ONNX           | Model export & optimization          |
 | ONNX Runtime   | Fast inference on exported models    |
 | OpenCV         | Image preprocessing & visualization  |
 | Python         | Full implementation                  |
 
----
-
-## 🚀 Export & Optimization
-
-- Both YOLO models exported using:
-  ```python
-  model.export(format="onnx", simplify=True, opset=12)
