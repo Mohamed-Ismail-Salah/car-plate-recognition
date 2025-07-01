@@ -1,4 +1,6 @@
 venv
 models/**
-data/**
+data/*
+!data/.gitkeep
 __pycache__/
+runs/** /**
