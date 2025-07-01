@@ -16,7 +16,7 @@ def measure(path, iters=50):
         return
     try:
         sess = ort.InferenceSession(path, providers=['CPUExecutionProvider'])
-        img = cv2.imread("test.jpg")
+        img = cv2.imread("deployment/test.jpg")
         if img is None:
             raise FileNotFoundError(" Couldn't find test.jpg.")
         inp = preprocess(img)
@@ -39,6 +39,6 @@ model_names = [
 
  
 for name in model_names:
-    print(f"\n📌 Measuring: {name}")
+    print(f"\n Measuring: {name}")
     measure(f"models/{name}.onnx")
     measure(f"models/{name}_quant.onnx")
